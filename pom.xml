@@ -41,6 +41,14 @@
     </dependency>
   </dependencies>
 
+  <distributionManagement>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>a0yvmi4cvczdj-artifactory-primary-0-snapshots</name>
+        <url>https://paragrghoshal.jfrog.io/artifactory/lib_maven_jfrog-libs-snapshot-local</url>
+    </snapshotRepository>
+  </distributionManagement>   
+
   <build>
     <!-- <pluginManagement>lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
@@ -74,7 +82,6 @@
           <artifactId>maven-deploy-plugin</artifactId>
           <version>2.8.2</version>
         </plugin>
-        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
         <plugin>
           <artifactId>maven-site-plugin</artifactId>
           <version>3.7.1</version>
@@ -83,6 +90,7 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
@@ -95,7 +103,11 @@
             </execution>
           </executions>
         </plugin>
+
       </plugins>
     <!-- </pluginManagement> -->
+
+
+
   </build>
 </project>
